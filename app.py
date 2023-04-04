@@ -92,6 +92,7 @@ def covid():
 def breast_cancer():
     return render_template('breastcancer.html')
 
+
 @app.route('/heartdisease')
 def heartdisease():
     return render_template('heartdisease.html')
