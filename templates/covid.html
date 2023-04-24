@@ -3,20 +3,19 @@
 
 <style type='text/css'>
     body {
-        background-image: url(http://www.pixelstalk.net/wp-content/uploads/2016/04/A-very-pink-abstract-wallpaper-HD.png);
-        background-position: center;
-        background-size: cover;
+        background-image: url(static/cw.png);
+    background-position: center;
+    background-size: cover;
         font-family: sans-serif;
         margin-top: 40px;
-        
 
     }
 
     .regform {
         width: 800px;
-        background-color: pink;
+        background-color: rgb(0, 0, 0, 0.8);
         margin: auto;
-        color: darkblue;
+        color: #FFFFFF;
         padding: 10px 0px 10px 0px;
         text-align: center;
         border-radius: 15px 15px 0px 0px;
@@ -26,13 +25,11 @@
     .main-form {
         width: 800px;
         margin: auto;
-        font-weight: bold;
-        font-size: 17px;
-        background-color: rgba(135, 206, 235, 0.5);
+        background-color: rgb(0, 0, 0, 0.7);
         padding-left: 50px;
         padding-right: 50px;
         padding-bottom: 20px;
-        color: lightorange;
+        color: #FFFFFF;
     }
 
     .form-group {
@@ -51,7 +48,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
 
-    <title>Breast Cancer Detection</title>
+    <title>Covid Detection</title>
 </head>
 
 <body>
@@ -67,11 +64,11 @@
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
 
                     <li class="nav-item">
-                        <a class="nav-link " aria-current="page" href="/covid">Covid</a>
+                        <a class="nav-link active" aria-current="page" href="/covid">Covid</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="/breastcancer">Breast Cancer</a>
+                        <a class="nav-link " aria-current="page" href="/breastcancer">Breast Cancer</a>
                     </li>
 
                     <li class="nav-item">
@@ -82,12 +79,11 @@
         </div>
     </nav>
 
-
     <div class='regform mt-3'>
-        <h1>Breast Cancer Detection</h1>
+        <h1>Covid-19 Detection</h1>
     </div>
 
-    <form action='resultbc' class='main-form needs-validation' method="POST" enctype="multipart/form-data">
+    <form action='resultc' class='main-form needs-validation' method="POST" enctype="multipart/form-data">
         <div class="row">
             <div class="col">
                 <div class='form-group'>
@@ -103,17 +99,17 @@
             </div>
         </div>
 
-        <div class="row">
-            <div class='col'>
-                <label for="phone">Phone No.</label>
-                <input type="number" name="phone" id="phone" class="form-control" required='True'>
-            </div>
+
+        <div class='form-group'>
+            <label for="phone">Phone No.</label>
+            <input type="number" name="phone" id="phone" class="form-control" required='True'>
+            <small class='form-text ' style='color: #FFFFFF;'>* Include your area code</small>
+        </div>
 
 
-            <div class='col'>
-                <label for="email">Email</label>
-                <input type="email" name="email" id="email" class="form-control" required='True'>
-            </div>
+        <div class='form-group'>
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" class="form-control" required='True'>
         </div>
 
 
@@ -122,6 +118,7 @@
                 <div class="form-group">
                     <label for="gender">Gender</label>
                     <select name="gender" id="gender" class="form-control" required='True'>
+                        <option value="male">Male</option>
                         <option value="female">Female</option>
                     </select>
                 </div>
@@ -134,53 +131,20 @@
             </div>
         </div>
 
-        <div class="row">
-            <div class="col">
-                <div class="form-group">
-                    <label for="concave_points_mean">Concave Points Mean</label>
-                    <input type="number" step="any" name="concave_points_mean" id="concave_points_mean" class="form-control"
-                        required='True'>
-                </div>
-            </div>
-            <div class="col">
-                <div class='form-group'>
-                    <label for="area_mean">Area Mean</label>
-                    <input type="number" step="any" name="area_mean" id="area_mean" class="form-control" required='True'>
-                </div>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col">
-                <div class="form-group">
-                    <label for="radius_mean">Radius Mean</label>
-                    <input type="number" step="any" name="radius_mean" id="radius_mean" class="form-control" required='True'>
-                </div>
-            </div>
-            <div class="col">
-                <div class='form-group'>
-                    <label for="perimeter_mean">Perimeter Mean</label>
-                    <input type="number" step="any" name="perimeter_mean" id="perimeter_mean" class="form-control" required='True'>
-                </div>
-            </div>
-            <div class="col">
-                <div class='form-group'>
-                    <label for="concavity_mean">Concavity Mean</label>
-                    <input type="number" step="any" name="concavity_mean" id="concavity_mean" class="form-control" required='True'>
-                </div>
-            </div>
+        <div class='form-group'>
+            <label for="inputGroupFile02">Upload your Chest Scan </label>
+            <input type="file" class="form-control" id="file" name='file'>
         </div>
 
 
         <div class='text-center'>
-            <button type='submit' class='btn btn-outline-success' style='width:700px; margin-top: 30px;'> <b> Submit </b>
+            <button type='submit' class='btn btn-outline-success' style='width:700px;margin-top: 30px;'> Submit
             </button>
         </div>
 
 
 
     </form>
-
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
