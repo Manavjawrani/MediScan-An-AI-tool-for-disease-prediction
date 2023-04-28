@@ -3,19 +3,19 @@
 
 <style type='text/css'>
     body {
-        background-image: url(static/cw.png);
+    background-image: url(http://www.pixelstalk.net/wp-content/uploads/2016/04/A-very-pink-abstract-wallpaper-HD.png);
     background-position: center;
     background-size: cover;
-        font-family: sans-serif;
-        margin-top: 40px;
+    font-family: sans-serif;
+    margin-top: 40px;
 
     }
 
     .regform {
         width: 800px;
-        background-color: rgb(0, 0, 0, 0.8);
         margin: auto;
-        color: #FFFFFF;
+        color: red;
+        background-color: lightgreen;
         padding: 10px 0px 10px 0px;
         text-align: center;
         border-radius: 15px 15px 0px 0px;
@@ -25,11 +25,13 @@
     .main-form {
         width: 800px;
         margin: auto;
-        background-color: rgb(0, 0, 0, 0.7);
+        font-size: 19px;
+        font-weight: bold;
         padding-left: 50px;
         padding-right: 50px;
         padding-bottom: 20px;
-        color: #FFFFFF;
+        color: black;
+        background-color: rgba(135, 206, 235, 0.5);
     }
 
     .form-group {
@@ -70,7 +72,6 @@
                     <li class="nav-item">
                         <a class="nav-link " aria-current="page" href="/breastcancer">Breast Cancer</a>
                     </li>
-
                     <li class="nav-item">
                         <a class="nav-link " aria-current="page" href="/heartdisease">Heart Disease</a>
                     </li>
@@ -103,7 +104,7 @@
         <div class='form-group'>
             <label for="phone">Phone No.</label>
             <input type="number" name="phone" id="phone" class="form-control" required='True'>
-            <small class='form-text ' style='color: #FFFFFF;'>* Include your area code</small>
+        
         </div>
 
 
@@ -132,14 +133,14 @@
         </div>
 
         <div class='form-group'>
-            <label for="inputGroupFile02">Upload your Chest Scan </label>
+            <label for="inputGroupFile02"> Upload your Chest Scan </label>
             <input type="file" class="form-control" id="file" name='file'>
         </div>
 
 
         <div class='text-center'>
-            <button type='submit' class='btn btn-outline-success' style='width:700px;margin-top: 30px;'> Submit
-            </button>
+            <button type='submit' class='btn btn-outline-success' style='width:700px;margin-top: 30px;'> <b> Submit
+            </b></button>
         </div>
 
 
